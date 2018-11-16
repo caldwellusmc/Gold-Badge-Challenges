@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace Challenge_5
 {
-    class Program
+    public class CustomerRepository
     {
-        static void Main(string[] args)
-        {
-            ProgramUI program = new ProgramUI();
-            program.Run();
-        }
     }
 }
