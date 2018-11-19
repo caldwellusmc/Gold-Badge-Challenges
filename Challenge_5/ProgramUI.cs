@@ -19,23 +19,23 @@ namespace Challenge_5
         public void RunMenu()
         {
             bool isRunning = true;
-            while(isRunning)
+            while (isRunning)
             {
-                Console.WriteLine("Select from the following options:"+
-                    "\n1. Create"+
-                    "\n2. Read"+
-                    "\n3. Update"+
-                    "\n4. Delete"+
+                Console.WriteLine("Select from the following options:" +
+                    "\n1. Create" +
+                    "\n2. View" +
+                    "\n3. Update" +
+                    "\n4. Delete" +
                     "\n5. Exit");
 
                 int input = int.Parse(Console.ReadLine());
-                switch(input)
+                switch (input)
                 {
                     case 1:
                         Create();
                         break;
                     case 2:
-                        Read();
+                        View();
                         break;
                     case 3:
                         Update();
@@ -54,6 +54,30 @@ namespace Challenge_5
                         break;
                 }
             }
+        }
+        private void Create()
+        {
+            Customer newCustomer = new Customer();
+            Console.WriteLine("Enter the First Name.");
+            newCustomer.FirstName = Console.ReadLine();
+
+            Console.WriteLine("Enter the last name.");
+            newCustomer.LastName = Console.ReadLine();
+
+            Console.WriteLine("Is this a past, present, or potential customer?");
+            string input = Console.ReadLine();
+        }
+        private void View()
+        {
+
+        }
+        private void Update()
+        {
+
+        }
+        private void Delete()
+        {
+
         }
     }
 }
